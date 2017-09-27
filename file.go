@@ -114,6 +114,7 @@ func (f *File) Write(writer io.Writer) (err error) {
 		if err != nil {
 			return err
 		}
+		zipWriter.Flush()
 	}
 	return zipWriter.Close()
 }
